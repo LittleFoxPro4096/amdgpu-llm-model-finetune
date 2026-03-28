@@ -18,15 +18,15 @@ conda activate amdgpu-torch
 ## 安装依赖
 
 ```cmd
-curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2/rocm_sdk_core-7.2.0.dev0-py3-none-win_amd64.whl
-curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2/rocm_sdk_devel-7.2.0.dev0-py3-none-win_amd64.whl
-curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2/rocm_sdk_libraries_custom-7.2.0.dev0-py3-none-win_amd64.whl
-curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2/rocm-7.2.0.dev0.tar.gz
-curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2/torch-2.9.1+rocmsdk20260116-cp312-cp312-win_amd64.whl
-curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2/torchaudio-2.9.1+rocmsdk20260116-cp312-cp312-win_amd64.whl
-curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2/torchvision-0.24.1+rocmsdk20260116-cp312-cp312-win_amd64.whl
-pip install --no-cache-dir rocm_sdk_core-7.2.0.dev0-py3-none-win_amd64.whl rocm_sdk_devel-7.2.0.dev0-py3-none-win_amd64.whl rocm_sdk_libraries_custom-7.2.0.dev0-py3-none-win_amd64.whl rocm-7.2.0.dev0.tar.gz
-pip install --no-cache-dir torch-2.9.1+rocmsdk20260116-cp312-cp312-win_amd64.whl torchaudio-2.9.1+rocmsdk20260116-cp312-cp312-win_amd64.whl torchvision-0.24.1+rocmsdk20260116-cp312-cp312-win_amd64.whl
+curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2.1/rocm_sdk_core-7.2.1-py3-none-win_amd64.whl
+curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2.1/rocm_sdk_devel-7.2.1-py3-none-win_amd64.whl
+curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2.1/rocm_sdk_libraries_custom-7.2.1-py3-none-win_amd64.whl
+curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2.1/rocm-7.2.1.tar.gz
+curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2.1/torch-2.9.1+rocm7.2.1-cp312-cp312-win_amd64.whl
+curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2.1/torchaudio-2.9.1+rocm7.2.1-cp312-cp312-win_amd64.whl
+curl -L -O https://repo.radeon.com/rocm/windows/rocm-rel-7.2.1/torchvision-0.24.1+rocm7.2.1-cp312-cp312-win_amd64.whl
+pip install --no-cache-dir rocm_sdk_core-7.2.1-py3-none-win_amd64.whl rocm_sdk_devel-7.2.1-py3-none-win_amd64.whl rocm_sdk_libraries_custom-7.2.1-py3-none-win_amd64.whl rocm-7.2.1.tar.gz
+pip install --no-cache-dir torch-2.9.1+rocm7.2.1-cp312-cp312-win_amd64.whl torchaudio-2.9.1+rocm7.2.1-cp312-cp312-win_amd64.whl torchvision-0.24.1+rocm7.2.1-cp312-cp312-win_amd64.whl
 pip install transformers accelerate datasets peft trl
 python -c "import torch; print(f'PyTorch {torch.__version__}'); print(f'GPU: {torch.cuda.is_available()}'); print(f'Device: {torch.cuda.get_device_name(0)}')"
 ```
